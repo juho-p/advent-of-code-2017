@@ -19,12 +19,12 @@ thing :: Parser Thing
 thing = (Group <$> group) <|> (Garbage <$> garbage)
 
 totalScore :: Int -> Thing -> Int
-totalScore level (Group xs) = level + sum (totalScore (level + 1) <$> xs)
-totalScore _ (Garbage _) = 0
+totalScore level (Group   xs) = level + sum (totalScore (level + 1) <$> xs)
+totalScore _     (Garbage _ ) = 0
 
 garbageCount :: Thing -> Int
-garbageCount (Garbage s) = length s
-garbageCount (Group xs) = sum $ map garbageCount xs
+garbageCount (Garbage s ) = length s
+garbageCount (Group   xs) = sum $ map garbageCount xs
 
 main :: IO ()
 main = do

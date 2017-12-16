@@ -7,7 +7,6 @@ import Text.Parsec
 import Text.Parsec.String
 
 import qualified Data.Vector.Unboxed as V
-import qualified Data.Set as S
 
 type Prog = Int8
 
@@ -51,11 +50,11 @@ showPrograms ps = map showProg (V.toList ps)
     where showProg = chr . (+ord 'a') . fromIntegral
 
 solveBillionRuns :: [Move] -> Programs
-solveBillionRuns moves = runs !! (n-1)
+solveBillionRuns moves = runs !! (n - 1)
   where
     runs = tail $ iterate (seq moves $ evalMoves moves) start
     loop = fromMaybe undefined $ elemIndex start runs
-    n = 1000000000 `rem` (loop + 1)
+    n    = 1000000000 `rem` (loop + 1)
 
 main :: IO ()
 main = do

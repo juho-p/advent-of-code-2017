@@ -54,8 +54,8 @@ solveBillionRuns :: [Move] -> Programs
 solveBillionRuns moves = runs !! (n-1)
   where
     runs = tail $ iterate (seq moves $ evalMoves moves) start
-    loop = fromMaybe undefined $ elemIndex start (tail runs)
-    n = 1000000000 `rem` (loop + 2)
+    loop = fromMaybe undefined $ elemIndex start runs
+    n = 1000000000 `rem` (loop + 1)
 
 main :: IO ()
 main = do

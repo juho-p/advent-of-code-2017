@@ -97,6 +97,6 @@ trySolve input =
 
 main :: IO ()
 main = do
-    input <- readFile "d8.txt"
+    input <- readFile "input/d8.txt"
     print $ trySolve input
     return ()

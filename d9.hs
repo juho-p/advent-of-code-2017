@@ -28,7 +28,7 @@ garbageCount (Group   xs) = sum $ map garbageCount xs
 
 main :: IO ()
 main = do
-    root <- parseFromFile thing "d9.txt"
+    root <- parseFromFile thing "input/d9.txt"
     let part1 = totalScore 1 <$> root
     let part2 = garbageCount <$> root
     print part1

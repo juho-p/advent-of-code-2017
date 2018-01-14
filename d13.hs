@@ -30,7 +30,7 @@ minDelay layers = fromMaybe 0 $ find (not . anyCaught) [0..]
 
 main :: IO ()
 main = do
-    layers <- parseFromFile (many layer) "d13.txt"
+    layers <- parseFromFile (many layer) "input/d13.txt"
     let part1 = sum . map severity <$> layers
     print part1
     let part2 = minDelay <$> layers

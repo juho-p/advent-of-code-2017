@@ -22,7 +22,7 @@ part2 = validPasswordCount validPasswordDeluxe
 
 main :: IO ()
 main = do
-    input <- readFile "d4.txt"
+    input <- readFile "input/d4.txt"
     let passwords = lines input
     print $ part1 passwords
     print $ part2 passwords

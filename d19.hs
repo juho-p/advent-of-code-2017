@@ -50,7 +50,7 @@ path puzzle = path' S.empty (start puzzle)
             
 
 main = do
-    rows <- readFile "d19.txt"
+    rows <- readFile "input/d19.txt"
     let puzzle = readPuzzle rows
     let xs = path puzzle
     let chars = map (`at` puzzle) xs

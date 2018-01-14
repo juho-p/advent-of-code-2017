@@ -58,7 +58,7 @@ solveBillionRuns moves = runs !! (n - 1)
 
 main :: IO ()
 main = do
-    moves <- parseFromFile (parser `sepBy` char ',') "d16.txt"
+    moves <- parseFromFile (parser `sepBy` char ',') "input/d16.txt"
     let part1 = (`evalMoves`start) <$> moves
     print $ showPrograms <$> part1
 

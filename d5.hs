@@ -28,7 +28,7 @@ steps' !f !cnt !index !m = case f m index of
 
 main :: IO ()
 main = do
-    input <- readFile "d5.txt"
+    input <- readFile "input/d5.txt"
     let offsets = parse input
     print $ steps simpleExec offsets
     print $ steps advancedExec offsets

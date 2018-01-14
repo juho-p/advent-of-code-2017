@@ -56,11 +56,11 @@ parsePart2 = map ord . filter (not . isSpace)
 
 main :: IO ()
 main = do
-    lengths <- parsePart1 <$> readFile "d10.txt"
+    lengths <- parsePart1 <$> readFile "input/d10.txt"
     print $ part1 lengths
 
     print $ part2 []
     print $ part2 (map ord "AoC 2017")
 
-    lengths2 <- parsePart2 <$> readFile "d10.txt"
+    lengths2 <- parsePart2 <$> readFile "input/d10.txt"
     print $ part2 lengths2

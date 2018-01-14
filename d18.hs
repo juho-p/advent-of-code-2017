@@ -142,7 +142,7 @@ run2 program =
 
 main :: IO ()
 main = do
-    instructionList <- parseFromFile instructions "d18.txt"
+    instructionList <- parseFromFile instructions "input/d18.txt"
     let xs = V.fromList <$> instructionList
     let state = (\p -> ProgState p 0 Map.empty 0 Sequence.empty) <$> xs
     print $ eval <$> state

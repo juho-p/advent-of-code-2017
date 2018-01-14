@@ -54,6 +54,6 @@ part2 progs = fmap result (find match progs)
 
 main :: IO ()
 main = do
-    progs <- parseFromFile programs "d7.txt"
+    progs <- parseFromFile programs "input/d7.txt"
     print $ part1 <$> progs
     print $ part2 <$> progs

@@ -46,6 +46,6 @@ parse = map read . words
 
 main :: IO ()
 main = do
-    input <- readFile "d6.txt"
+    input <- readFile "input/d6.txt"
     let xs = parse input
     print $ cycles xs

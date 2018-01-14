@@ -57,6 +57,6 @@ part2 xs = map length $ iterate updateAll xs
 
 main :: IO ()
 main = do
-    xs <- parseFromFile particles "d20.txt"
+    xs <- parseFromFile particles "input/d20.txt"
     print (part1 <$> xs)
     print (part2 <$> xs)

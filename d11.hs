@@ -25,7 +25,7 @@ distances (ax, ay) ((x,y):dirs) = (abs dx + abs dy) `div` 2 : distances (dx, dy)
 
 main :: IO ()
 main = do
-    directions <- parse <$> readFile "d11.txt"
+    directions <- parse <$> readFile "input/d11.txt"
     let xs = distances (0, 0) directions
     print $ last xs
     print $ maximum xs

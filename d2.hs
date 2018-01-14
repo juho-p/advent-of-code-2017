@@ -17,7 +17,7 @@ rowDivision xs = head [ d |
 part2 = sum . map rowDivision
 
 main = do
-    input <- readFile "d2.txt"
+    input <- readFile "input/d2.txt"
     let table = readTable input
     print $ part1 table
     print $ part2 table

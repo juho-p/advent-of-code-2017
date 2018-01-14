@@ -43,7 +43,7 @@ groups g = foldr f [] progs
 
 main :: IO ()
 main = do
-    connections <- parseFromFile (many connection) "d12.txt"
+    connections <- parseFromFile (many connection) "input/d12.txt"
     let g     = graph <$> connections
     let part1 = group Set.empty 0 <$> g
     print $ Set.size <$> part1
